@@ -41,14 +41,14 @@ namespace dxvk {
     this->hideNvkGpu                    = config.getOption<Tristate>    ("d3d9.hideNvkGpu",                    Tristate::Auto) == Tristate::True;
     this->hideAmdGpu                    = config.getOption<Tristate>    ("d3d9.hideAmdGpu",                    Tristate::Auto) == Tristate::True;
     this->hideIntelGpu                  = config.getOption<Tristate>    ("d3d9.hideIntelGpu",                  Tristate::True) == Tristate::True;
-    this->maxFrameLatency               = config.getOption<int32_t>     ("d3d9.maxFrameLatency",               0);
+    this->maxFrameLatency               = config.getOption<int32_t>     ("d3d9.maxFrameLatency",               1);
     this->maxFrameRate                  = config.getOption<int32_t>     ("d3d9.maxFrameRate",                  0);
     this->presentInterval               = config.getOption<int32_t>     ("d3d9.presentInterval",               -1);
     this->shaderModel                   = config.getOption<int32_t>     ("d3d9.shaderModel",                   3u);
     this->dpiAware                      = config.getOption<bool>        ("d3d9.dpiAware",                      true);
     this->lenientClear                  = config.getOption<bool>        ("d3d9.lenientClear",                  false);
     this->deferSurfaceCreation          = config.getOption<bool>        ("d3d9.deferSurfaceCreation",          false);
-    this->samplerAnisotropy             = config.getOption<int32_t>     ("d3d9.samplerAnisotropy",             -1);
+    this->samplerAnisotropy             = config.getOption<int32_t>     ("d3d9.samplerAnisotropy",             16);
     this->maxAvailableMemory            = config.getOption<int32_t>     ("d3d9.maxAvailableMemory",            4096);
     this->supportCubeDepthFormats       = config.getOption<bool>        ("d3d9.supportCubeDepthFormats",       false);
     this->supportDFFormats              = config.getOption<bool>        ("d3d9.supportDFFormats",              true);
